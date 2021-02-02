@@ -18,20 +18,20 @@
 
  <!-- Formulaire Nous contacter--> 
         <h1>Nous contacter</h1>
-        <form action="contact.html"></form>
+        <form action="contact.html">
             <fieldset>
                 <legend>Nous contacter</legend>
                     <div>
                         <label for="emailinput">Votre email</label>
-                        <input type="text" name="email" id="emailinput">
+                        <input type="text" name="email" id="emailinput" required>
                     </div>
                     <div>
                         <label for="firstnameinput">Votre prénom</label>
-                        <input type="text" name="firstname" id="firstnameinput">
+                        <input type="text" name="firstname" id="firstnameinput" required>
                     </div>
                     <div>
                         <label for="familynameinput">Votre nom de famille</label>
-                        <input type="text" name="familyname" id="familynameinput">
+                        <input type="text" name="familyname" id="familynameinput" required>
                     </div>
 
 <!-- Formulaire avec bouton radio--> 
@@ -71,6 +71,31 @@
                         <label for="passwordinput">Mot de passe</label>
                     </div> 
 
+<!-- Formulaire avec liste déroulante -->
+                    <div>
+                        <label for="sexe">Sexe</label>
+                        <select name="sexe" id="sexe">
+                            <option value="feminin">Féminin</option>
+                            <option value="masculin" selected>Masculin</option>
+                        </select>
+                    </div>
+
+<!-- Formulaire avec liste déroulante avec des groupes d'éléments-->
+                    <div>
+                        <label id="moto">Motos en vente</label>
+                        <select name="moto" id="moto">
+                            <optgroup label="BMW">
+                                <option>1200 RT</option>
+                                <option>1200 GS</option>
+                                <option>1000 RR</option>
+                            </optgroup>
+                            <optgroup label="SUZUKI">
+                                <option>GSXR</option>
+                                <option>GSR</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
 <!-- Formulaire Connexion au compte utilisateur AVEC pré-remplissage d'email et autofocus (placement automatique du curseur dans le champ) dans le champ mot de passe -->
                     <label> Connectez-vous - Votre email est rempli automatiquement</label>
                     <div>
@@ -79,34 +104,63 @@
                     </div>
 
                     <div>
-                        <input type="password" name="password" id="passwordinput2" autofocus>
+                        <input type="password" name="password" id="passwordinput2">
                         <label for="passwordinput2">Mot de passe</label>
                     </div>
 
-<!-- Champ avec placeholder (Contenu du champ qui est grisé)-->
+<!-- Champ avec placeholder (Contenu du champ qui est grisé) et obligatoire de remplir pour envoyer le formulaire (attribut required) -->
                     <label> Connectez-vous - Suivez les instructions grisées dans les champs </label>
                     <div>
                         <input type="email" name="emailplaceholder" id="emailplaceholderinput" placeholder="sjcpm78@gmail.com">
                         <label for="emailplaceholderinput">Votre email de connexion</label>
+                    </div>  
+
+<!-- Champ de remplissage de message -->
+                    <div>
+                        <label for="message">Ecrivez votre message dans le champ</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre message ici"></textarea>
+                    </div>
+
+<!-- Création d'un bouton. Comme il est placé dans un formulaire alors il validera le formulaire grâce au type submit-->
+                    <button type="submit">Vous pouvez appuyer sur ce bouton</button>
+            </fieldset> 
+                    
+<!-- Formulaire avec une fichier intégré -->
+            <fieldset>
+                    <legend>Zone de téléchargement</legend>
+                    <label> Téléchargez votre pièce-jointe </label>
+                    <div>
+                        <input type="file" name="fileupload" id="fileuploadinput">
+                        <label for="fileuploadinput">Cliquez pour uploader votre pièce-jointe</label>
                     </div>
             </fieldset>
-
 
  <!-- Formulaire des conditions générales d'utilisation-->              
             <fieldset>
                 <legend>Les conditions générales d'utilisation</legend>
 
                 <label> Conditions générales d'utilisation</label>
-                <!-- Case CGU à cocher par l'utilisateur-->      
-                                  <div>
-                                       <label><input type="checkbox" name="cgu">En cochant cette case j'accepte les conditions d'utilisation</label>
-                                  </div>
+ <!-- Case CGU à cocher par l'utilisateur-->      
+                    <div>
+                        <label><input type="checkbox" name="cgu">En cochant cette case j'accepte les conditions d'utilisation</label>
+                    </div>
               
-                   <!-- Case CGU à cocher automatiquement-->  
+ <!-- Case CGU à cocher automatiquement-->  
                                   
-                                  <div>
-                                      <label><input type="checkbox" name="cgu-auto" checked>Les CGU ont été acceptées automatiquement, vous n'avez rien à cocher</label>
-                                  </div>
+                    <div>
+                         <label><input type="checkbox" name="cgu-auto" checked>Les CGU ont été acceptées automatiquement, vous n'avez rien à cocher</label>
+                    </div>
+
+<!-- Bouton d'envoi du formulaire -->
+                    <input type="submit" value="J'envoie mon formulaire">  
+                    <input type="reset" value="Annuler">
             </fieldset>
+        </form>
+
+<!-- Création d'un bouton. Comme il est placé hors du formulaire alors il se comportera comme un bouton "normal" -->
+                <fieldset>
+                    <legend>Création du bouton Acheter</legend>                    
+                    <button onclick="window.location.href = 'https://digivip.fr';">Acheter</button>
+                </fieldset>                    
     </body>
 </html>
