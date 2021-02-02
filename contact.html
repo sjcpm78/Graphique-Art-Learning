@@ -37,24 +37,57 @@
 <!-- Formulaire avec bouton radio--> 
                     <label>Sexe</label>
                     <div>
-                        <input type="radio" name="sexe" id="masculin">
-                        <label for="masculin">masculin</label>
+                        <input type="radio" name="sexe" id="masculinradioinput">
+                        <label for="masculinradioinput">masculin</label>
                     </div>
                     <div>
-                        <input type="radio" name="sexe" id="feminin">
-                        <label for="feminin">Féminin</label>
+                        <input type="radio" name="sexe" id="femininradioinput">
+                        <label for="femininradioinput">Féminin</label>
                     </div>
 
 <!-- Formulaire avec checkbox--> 
                     <label>Sexe</label>
+                    
                     <div>
-                        <input type="checkbox" name="sexe" id="masculin">
-                        <label for="masculin">Masculin</label>
+                        <input type="checkbox" name="sexe" id="masculincheckboxinput">
+                        <label for="masculincheckboxinput">Masculin</label>
                     </div>
+
                     <div>
-                        <input type="checkbox" name="sexe" id="feminin">
-                        <label for="feminin">Féminin</label>
-                    </div>             
+                        <input type="checkbox" name="sexe" id="feminincheckboxinput">
+                        <label for="feminincheckboxinput">Féminin</label>
+                    </div>   
+                    
+ <!-- Formulaire Connexion au compte utilisateur-->                    
+                    <label>Connectez-vous à votre compte</label>
+                    
+                    <div>   
+                        <input type="email" name="emailconnexion" id="emailconnexioninput">
+                        <label for="emailconnexioninput">Votre email</label>
+                    </div>
+
+                    <div>
+                        <input type="password" name="password" id="passwordinput">
+                        <label for="passwordinput">Mot de passe</label>
+                    </div> 
+            </fieldset>
+
+
+ <!-- Formulaire des conditions générales d'utilisation-->              
+            <fieldset>
+                <legend>Les conditions générales d'utilisation</legend>
+
+                <label> Conditions générales d'utilisation</label>
+                <!-- Case CGU à cocher par l'utilisateur-->      
+                                  <div>
+                                       <label><input type="checkbox" name="cgu">En cochant cette case j'accepte les conditions d'utilisation</label>
+                                  </div>
+              
+                   <!-- Case CGU à cocher automatiquement-->  
+                                  
+                                  <div>
+                                      <label><input type="checkbox" name="cgu-auto" checked>Les CGU ont été acceptées automatiquement, vous n'avez rien à cocher</label>
+                                  </div>
             </fieldset>
     </body>
 </html>
