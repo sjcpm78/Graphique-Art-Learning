@@ -16,7 +16,7 @@
             </ul>
         </nav>
 
- <!-- Formulaire --> 
+ <!-- Formulaire Nous contacter--> 
         <h1>Nous contacter</h1>
         <form action="contact.html"></form>
             <fieldset>
@@ -58,7 +58,7 @@
                         <label for="feminincheckboxinput">Féminin</label>
                     </div>   
                     
- <!-- Formulaire Connexion au compte utilisateur-->                    
+ <!-- Formulaire Connexion au compte utilisateur sans pré-remplissage-->                    
                     <label>Connectez-vous à votre compte</label>
                     
                     <div>   
@@ -70,6 +70,25 @@
                         <input type="password" name="password" id="passwordinput">
                         <label for="passwordinput">Mot de passe</label>
                     </div> 
+
+<!-- Formulaire Connexion au compte utilisateur AVEC pré-remplissage d'email et autofocus (placement automatique du curseur dans le champ) dans le champ mot de passe -->
+                    <label> Connectez-vous - Votre email est rempli automatiquement</label>
+                    <div>
+                        <input type="email" name="emailrempli" id="emailrempliinput" value="sjcpm78@gmail.com">
+                        <label for="emailrempliinput">Votre email de connexion</label>
+                    </div>
+
+                    <div>
+                        <input type="password" name="password" id="passwordinput2" autofocus>
+                        <label for="passwordinput2">Mot de passe</label>
+                    </div>
+
+<!-- Champ avec placeholder (Contenu du champ qui est grisé)-->
+                    <label> Connectez-vous - Suivez les instructions grisées dans les champs </label>
+                    <div>
+                        <input type="email" name="emailplaceholder" id="emailplaceholderinput" placeholder="sjcpm78@gmail.com">
+                        <label for="emailplaceholderinput">Votre email de connexion</label>
+                    </div>
             </fieldset>
 
 
